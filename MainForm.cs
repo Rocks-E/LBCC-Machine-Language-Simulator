@@ -14,6 +14,9 @@ namespace MachineLanguageSimulator {
 		public MainForm() {
 			this.InitializeComponent();
 
+			this.Text = "Linn-Benton Community College Machine Language Simulator";
+			//this.Icon = new Icon();
+
 			this.Size = new Size(665, 700);
 			this.MaximumSize = this.Size;
 			this.MinimumSize = this.Size;
