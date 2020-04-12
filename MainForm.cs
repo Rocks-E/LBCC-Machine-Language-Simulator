@@ -14,7 +14,7 @@ namespace MachineLanguageSimulator {
 		public MainForm() {
 			this.InitializeComponent();
 
-			this.Size = new Size(700, 700);
+			this.Size = new Size(665, 700);
 			this.MaximumSize = this.Size;
 			this.MinimumSize = this.Size;
 
@@ -148,25 +148,31 @@ namespace MachineLanguageSimulator {
 			};
 			this.pcirPanel.Controls.Add(this.irLabel);
 
-			this.programCounter = new MaskedTextBox() {
-				Font = cellFont,
-				Location = new Point(62, 35),
-				MaxLength = 2,
-				Size = cellSize,
-				Text = "00",
-				TextAlign = HorizontalAlignment.Center,
-			};
-			this.pcirPanel.Controls.Add(this.programCounter);
-
 			this.instructionRegister = new MaskedTextBox() {
 				Font = cellFont,
+				InsertKeyMode = InsertKeyMode.Overwrite,
 				Location = new Point(35, 0),
-				MaxLength = 4,
+				Mask = "AAAA",
+				PromptChar = '0',
 				Size = new Size(54, 25),
 				Text = "0000",
 				TextAlign = HorizontalAlignment.Center,
 			};
+			this.instructionRegister.KeyPress += InstructionRegister_KeyPressed;
 			this.pcirPanel.Controls.Add(this.instructionRegister);
+
+			this.programCounter = new MaskedTextBox() {
+				Font = cellFont,
+				InsertKeyMode = InsertKeyMode.Overwrite,
+				Location = new Point(62, 35),
+				Mask = "AA",
+				PromptChar = '0',
+				Size = cellSize,
+				Text = "00",
+				TextAlign = HorizontalAlignment.Center,
+			};
+			this.programCounter.KeyPress += CellInput_KeyPressed;
+			this.pcirPanel.Controls.Add(this.programCounter);
 
 			/*Buttons*/
 
@@ -241,20 +247,6 @@ namespace MachineLanguageSimulator {
 
 		}
 
-		//Move on once 2 characters are entered
-		private void CellInput_TextChanged(Object sender, EventArgs e) {
-
-			MaskedTextBox cell = sender as MaskedTextBox;
-
-			cell.Focus();
-
-			this.mainMemory[0x10].Text = (cell.SelectionStart + 1).ToString().PadLeft(2);
-
-			if(Regex.IsMatch(cell.Text, "^[0-9A-F][0-9A-F]$")) {
-				this.SelectNextControl(this.ActiveControl, true, true, true, true);
-			}
-		}
-
 		private void CellInput_KeyPressed(Object sender, KeyPressEventArgs kpe) {
 
 			MaskedTextBox cell = sender as MaskedTextBox;
@@ -278,7 +270,30 @@ namespace MachineLanguageSimulator {
 				this.SelectNextControl(this.ActiveControl, true, true, true, true);
 			}
 
-			this.mainMemory[0x10].Text = (cell.SelectionStart + 1).ToString().PadLeft(2);
+		}
+
+		private void InstructionRegister_KeyPressed(Object sender, KeyPressEventArgs kpe) {
+
+			MaskedTextBox cell = sender as MaskedTextBox;
+
+			cell.Focus();
+
+			//Only allow hex formatted characters
+			if ((kpe.KeyChar >= 'A' && kpe.KeyChar <= 'F') || (kpe.KeyChar >= 'a' && kpe.KeyChar <= 'f') || (kpe.KeyChar >= '0' && kpe.KeyChar <= '9') || kpe.KeyChar == 8) {
+
+				kpe.KeyChar = Char.ToUpper(kpe.KeyChar);
+				kpe.Handled = false;
+
+			}
+			else {
+				kpe.KeyChar = (Char)0;
+				kpe.Handled = true;
+				return;
+			}
+
+			if (cell.SelectionStart > 2) {
+				this.SelectNextControl(this.ActiveControl, true, true, true, true);
+			}
 
 		}
 
