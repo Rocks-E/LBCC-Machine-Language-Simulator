@@ -1,0 +1,13 @@
+C:\Users\minec\source\repos\MachineLanguageSimulator\bin\Debug\netcoreapp3.1\Machine Language Simulator.exe
+C:\Users\minec\source\repos\MachineLanguageSimulator\bin\Debug\netcoreapp3.1\Machine Language Simulator.deps.json
+C:\Users\minec\source\repos\MachineLanguageSimulator\bin\Debug\netcoreapp3.1\Machine Language Simulator.runtimeconfig.json
+C:\Users\minec\source\repos\MachineLanguageSimulator\bin\Debug\netcoreapp3.1\Machine Language Simulator.runtimeconfig.dev.json
+C:\Users\minec\source\repos\MachineLanguageSimulator\bin\Debug\netcoreapp3.1\Machine Language Simulator.dll
+C:\Users\minec\source\repos\MachineLanguageSimulator\bin\Debug\netcoreapp3.1\Machine Language Simulator.pdb
+C:\Users\minec\source\repos\MachineLanguageSimulator\obj\Debug\netcoreapp3.1\Machine Language Simulator.csprojAssemblyReference.cache
+C:\Users\minec\source\repos\MachineLanguageSimulator\obj\Debug\netcoreapp3.1\MachineLanguageEmu.MainForm.resources
+C:\Users\minec\source\repos\MachineLanguageSimulator\obj\Debug\netcoreapp3.1\Machine Language Simulator.csproj.GenerateResource.cache
+C:\Users\minec\source\repos\MachineLanguageSimulator\obj\Debug\netcoreapp3.1\Machine Language Simulator.AssemblyInfoInputs.cache
+C:\Users\minec\source\repos\MachineLanguageSimulator\obj\Debug\netcoreapp3.1\Machine Language Simulator.AssemblyInfo.cs
+C:\Users\minec\source\repos\MachineLanguageSimulator\obj\Debug\netcoreapp3.1\Machine Language Simulator.dll
+C:\Users\minec\source\repos\MachineLanguageSimulator\obj\Debug\netcoreapp3.1\Machine Language Simulator.pdb

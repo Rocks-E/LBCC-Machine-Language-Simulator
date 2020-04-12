@@ -1,0 +1,11 @@
+C:\Users\minec\source\repos\MachineLanguageEmu\bin\Debug\netcoreapp3.1\MachineLanguageEmu.exe
+C:\Users\minec\source\repos\MachineLanguageEmu\bin\Debug\netcoreapp3.1\MachineLanguageEmu.deps.json
+C:\Users\minec\source\repos\MachineLanguageEmu\bin\Debug\netcoreapp3.1\MachineLanguageEmu.runtimeconfig.json
+C:\Users\minec\source\repos\MachineLanguageEmu\bin\Debug\netcoreapp3.1\MachineLanguageEmu.runtimeconfig.dev.json
+C:\Users\minec\source\repos\MachineLanguageEmu\bin\Debug\netcoreapp3.1\MachineLanguageEmu.dll
+C:\Users\minec\source\repos\MachineLanguageEmu\bin\Debug\netcoreapp3.1\MachineLanguageEmu.pdb
+C:\Users\minec\source\repos\MachineLanguageEmu\obj\Debug\netcoreapp3.1\MachineLanguageEmu.csprojAssemblyReference.cache
+C:\Users\minec\source\repos\MachineLanguageEmu\obj\Debug\netcoreapp3.1\MachineLanguageEmu.AssemblyInfoInputs.cache
+C:\Users\minec\source\repos\MachineLanguageEmu\obj\Debug\netcoreapp3.1\MachineLanguageEmu.AssemblyInfo.cs
+C:\Users\minec\source\repos\MachineLanguageEmu\obj\Debug\netcoreapp3.1\MachineLanguageEmu.dll
+C:\Users\minec\source\repos\MachineLanguageEmu\obj\Debug\netcoreapp3.1\MachineLanguageEmu.pdb
